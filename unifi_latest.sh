@@ -3,6 +3,7 @@ sudo apt-get update && sudo apt-get install ca-certificates apt-transport-https
 echo 'deb https://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /etc/apt/sources.list.d/100-ubnt-unifi.list
 sudo wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg 
 sudo apt install openjdk-8-jdk-headless
+echo "Select Java8 when asked"
 sudo update-alternatives --config java
 sudo apt-get update && sudo apt-get install unifi -y
 sudo service unifi start
